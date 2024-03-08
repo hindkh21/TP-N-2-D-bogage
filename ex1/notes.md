@@ -24,12 +24,12 @@ apply_laplacian(struct ppm_image *src, struct ppm_image *dest) : Cette fonction 
    `1. contours.ppm`
 
    `Cette image présente les contours détectés de l'image précédente (carre.ppm). Les contours sont visibles sous forme de lignes délimitant les régions où il y a des changements brusques dans les niveaux de luminosité. Les contours sont souvent utilisés pour mettre en évidence les frontières d'objets dans une image et sont obtenus ici grâce à une opération de détection de contours basée sur une convolution avec un laplacien.`
-   
+
 ![test](contours.jpg)
 
 `2. carre.ppm`
 
 `* Cette image contient un motif composé d'un carré rouge dessiné sur un fond avec des variations de couleurs en fonction des coordonnées des pixels. Le carré rouge est centré dans l'image et occupe une partie significative de celle-ci.`
 
-![test](image.png)
+![test](carre.png)
 
