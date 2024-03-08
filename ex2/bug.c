@@ -1,36 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void process_data(int *data, int size) {
-    for (int i = 0; i <= size; i++) { 
+void process_data(int *data, int size)
+{
+    for (int i = 0; i <= size; i++)
+    {
         data[i] *= 2;
     }
 }
 
-void process_data2(int *data, int size) {
-    for (int i = 0; i < size + 50; i++) { 
+void process_data2(int *data, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         data[i] *= 2;
     }
 }
 
-void process_data3(int *data, int size) {
-    for (int i = 0; i < size * 1000; i++) { 
+void process_data3(int *data, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         data[i] *= 2;
     }
 }
 
-
-int main() {
-    int size = 4096;
+int main()
+{
+    int size = 5000;
     int *data = (int *)malloc(size * sizeof(int));
 
-    if (data == NULL) {
+    if (data == NULL)
+    {
         printf("Erreur lors de l'allocation de mémoire.\n");
         return -1;
     }
 
     // Remplissage du tableau
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         data[i] = i;
     }
 
@@ -38,7 +46,6 @@ int main() {
     process_data(data, size);
     process_data2(data, size);
     process_data3(data, size);
-
 
     // Libération de la mémoire
     free(data);
